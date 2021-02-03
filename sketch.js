@@ -9,7 +9,7 @@ var sound1,sound3,sound4;
 function preload(){ 
   ballImg = loadImage("ball.png");
   backgroundImg = loadImage("sky.png");
-  redBarImg = loadImage("redbar2.png");
+  redBarImg = loadImage("redBar2.png");
   greenBarImg = loadImage("greenBar.png");
   springImg = loadImage("spring.png");
   playerImg = loadImage("player.png");
