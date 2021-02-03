@@ -7,18 +7,18 @@ var score = 0;
 var sound1,sound3,sound4;
 
 function preload(){ 
-  ballImg = loadImage("sprites/ball.png");
-  backgroundImg = loadImage("sprites/sky.png");
-  redBarImg = loadImage("sprites/redbar2.png");
-  greenBarImg = loadImage("sprites/greenBar.png");
-  springImg = loadImage("sprites/spring.png");
-  playerImg = loadImage("sprites/player.png");
-  playerKickImg = loadImage("sprites/playerKick.png");
-  retryImg =loadImage("sprites/retry.png");
-  yellowBarImg = loadImage("sprites/yellowBar.png");
-  sound1 = loadSound("sound/sound1.mp3");
-  sound3 = loadSound("sound/sound3.wav");
-  sound4 = loadSound("sound/sound4.mp3");
+  ballImg = loadImage("ball.png");
+  backgroundImg = loadImage("sky.png");
+  redBarImg = loadImage("redbar2.png");
+  greenBarImg = loadImage("greenBar.png");
+  springImg = loadImage("spring.png");
+  playerImg = loadImage("player.png");
+  playerKickImg = loadImage("playerKick.png");
+  retryImg =loadImage("retry.png");
+  yellowBarImg = loadImage("yellowBar.png");
+  sound1 = loadSound("sound1.mp3");
+  sound3 = loadSound("sound3.wav");
+  sound4 = loadSound("sound4.mp3");
 }
 
 function setup() {
