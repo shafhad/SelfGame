@@ -61,44 +61,7 @@ function draw() {
     ball.x-= 3;
   }
  
-  if (keyCode === 32 && gamestate === "serve"){
-    ball.velocityY= - 6;
-    player.addImage(playerKickImg);
-    gamestate = "play";
-  }
-
-  if (gamestate === "play"){
-    ball.velocityY = ball.velocityY + 3;
-  }
-  if(keyCode === 39){
-    if(isTouching(ball,springGroup) && gamestate === "play"){
-      score = score + 2;
-      ball.velocityY = ball.velocityY -5;
-      sound4.play();
-    }
-  }
-
-  if(isTouching(ball,greenBarGroup)){
-    score = score + 1;
-    ball.velocityY = ball.velocityY -5;
-    sound1.play();
-  }
-
-  if(isTouching(ball,yellowBar) && gamestate === "play"){
-    score = score + 1;
-    ball.velocityY = ball.velocityY - 5;
-    sound1.play();
-  }
-
-  if(isTouching(ball,redBarGroup) && gamestate === "play"){
-    stroke("yellow");
-    fill("blue");
-    text("Game Over", displayWidth/2, displayHeight/2);
-    textSize(60);
-    retry.visible = true;
-    sound3.play();
-  }
-
+  
   spawnSprings();
   spawnRedBars();
   spawnGreenBars();
@@ -166,4 +129,50 @@ function spawnSprings(){
     spring.lifetime = 1000;
     springGroup.add(spring);
   }
+}
+
+function keyPressed(){
+
+  if (keyCode === 32 && gamestate === "serve"){
+    ball.velocityY= - 6;
+    player.addImage(playerKickImg);
+    gamestate = "play";
+  }
+
+  if (gamestate === "play"){
+    ball.velocityY = ball.velocityY + 3;
+  }
+  if(keyCode === 39){
+    if(isTouching(ball,springGroup) && gamestate === "play"){
+      score = score + 2;
+      ball.velocityY = ball.velocityY -5;
+      sound4.play();
+      
+    }
+  }
+
+  if(isTouching(ball,greenBarGroup)){
+    score = score + 1;
+    ball.velocityY = ball.velocityY -5;
+    sound1.play();
+    
+  }
+
+  if(isTouching(ball,yellowBar) && gamestate === "play"){
+    score = score + 1;
+    ball.velocityY = ball.velocityY - 5;
+    sound1.play();
+    
+  }
+
+  if(isTouching(ball,redBarGroup) && gamestate === "play"){
+    stroke("yellow");
+    fill("blue");
+    text("Game Over", displayWidth/2, displayHeight/2);
+    textSize(60);
+    retry.visible = true;
+    sound3.play();
+   
+  }
+
 }
